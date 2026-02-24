@@ -1,0 +1,148 @@
+@base_url = http://127.0.0.1:8000
+@event_id = 1
+@registration_id = 1
+@schedule_item_id = 1
+
+### Healthcheck
+GET {{base_url}}/api/ping/
+Accept: application/json
+
+
+########## EVENTS ##########
+
+### Events – Liste (nach Start sortiert)
+GET {{base_url}}/api/events/?ordering=start
+Accept: application/json
+
+### Events – Suche
+GET {{base_url}}/api/events/?search=ride
+Accept: application/json
+
+### Event erstellen
+POST {{base_url}}/api/events/
+Content-Type: application/json
+
+{
+  "title": "Family Ride",
+  "description": "Jährliches Haselrodeo",
+  "location": "Haselrodeo Platz",
+  "start": "2025-09-01T12:00:00Z",
+  "end": "2025-09-02T12:00:00Z",
+  "capacity": 100
+}
+
+### Event abrufen
+GET {{base_url}}/api/events/{{event_id}}/
+Accept: application/json
+
+### Event aktualisieren
+PUT {{base_url}}/api/events/{{event_id}}/
+Content-Type: application/json
+
+{
+  "title": "Family Ride 2025",
+  "description": "Update",
+  "location": "Haselrodeo Platz",
+  "start": "2025-09-01T12:00:00Z",
+  "end": "2025-09-02T12:00:00Z",
+  "capacity": 120
+}
+
+### Event löschen
+DELETE {{base_url}}/api/events/{{event_id}}/
+
+
+
+########## REGISTRATIONS ##########
+
+### Registrations – Liste
+GET {{base_url}}/api/registrations/
+Accept: application/json
+
+### Registrations – Filter (nach Event)
+GET {{base_url}}/api/registrations/?event={{event_id}}
+Accept: application/json
+
+### Registration erstellen
+POST {{base_url}}/api/registrations/
+Content-Type: application/json
+
+{
+  "event": {{event_id}},
+  "first_name": "Alex",
+  "last_name": "Mustermann",
+  "email": "alex@example.com",
+  "role": "ATTENDEE",
+  "status": "GOING",
+  "comment": "Freue mich!"
+}
+
+### Registration aktualisieren
+PUT {{base_url}}/api/registrations/{{registration_id}}/
+Content-Type: application/json
+
+{
+  "event": {{event_id}},
+  "first_name": "Alex",
+  "last_name": "Mustermann",
+  "email": "alex@example.com",
+  "role": "ATTENDEE",
+  "status": "MAYBE",
+  "comment": "Vielleicht doch später."
+}
+
+### Registration löschen
+DELETE {{base_url}}/api/registrations/{{registration_id}}/
+
+
+
+########## SCHEDULE ITEMS ##########
+
+### Schedule Items – Liste
+GET {{base_url}}/api/schedule-items/
+Accept: application/json
+
+### Schedule Item erstellen
+POST {{base_url}}/api/schedule-items/
+Content-Type: application/json
+
+{
+  "event": {{event_id}},
+  "title": "Anreise & Check-In",
+  "start": "2025-09-01T09:00:00Z",
+  "end": "2025-09-01T10:00:00Z"
+}
+
+### Schedule Item aktualisieren
+PUT {{base_url}}/api/schedule-items/{{schedule_item_id}}/
+Content-Type: application/json
+
+{
+  "event": {{event_id}},
+  "title": "Check-In & Kaffee",
+  "start": "2025-09-01T09:00:00Z",
+  "end": "2025-09-01T10:30:00Z"
+}
+
+### Schedule Item löschen
+DELETE {{base_url}}/api/schedule-items/{{schedule_item_id}}/
+
+
+
+########## EXTRA: ORDERING & FILTER ##########
+
+### Events – alphabetisch
+GET {{base_url}}/api/events/?ordering=title
+Accept: application/json
+
+### Events – Suche „hasel“
+GET {{base_url}}/api/events/?search=hasel
+Accept: application/json
+
+### Registrations – nur ATTENDEE
+GET {{base_url}}/api/registrations/?role=ATTENDEE
+Accept: application/json
+
+### Registrations – nur GOING
+GET {{base_url}}/api/registrations/?status=GOING
+Accept: application/json

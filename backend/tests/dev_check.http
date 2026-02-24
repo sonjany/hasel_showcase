@@ -1,0 +1,78 @@
+@base_url = http://127.0.0.1:8000
+@json = application/json
+
+### Healthcheck
+GET {{base_url}}/api/ping/
+Accept: {{json}}
+
+
+### Events – Liste (ohne Pagination-Parameter)
+GET {{base_url}}/api/events/
+Accept: {{json}}
+
+
+### Events – Pagination (VARIANTE A: Limit/Offset)  ← passt, wenn du DRF LimitOffsetPagination nutzt
+GET {{base_url}}/api/events/?limit=5&offset=0
+Accept: {{json}}
+
+### Events – Pagination (VARIANTE A: nächste Seite)
+GET {{base_url}}/api/events/?limit=5&offset=5
+Accept: {{json}}
+
+
+### Events – Pagination (VARIANTE B: PageNumber)     ← passt, wenn du DRF PageNumberPagination nutzt
+GET {{base_url}}/api/events/?page=1
+Accept: {{json}}
+
+### Events – Pagination (VARIANTE B: Seite 2)
+GET {{base_url}}/api/events/?page=2
+Accept: {{json}}
+
+
+### Events – mit Ordering nach Start (funktioniert nur, wenn OrderingFilter aktiv ist & Feld "start" existiert)
+GET {{base_url}}/api/events/?ordering=start
+Accept: {{json}}
+
+### Events – absteigend nach Start
+GET {{base_url}}/api/events/?ordering=-start
+Accept: {{json}}
+
+
+### Einzelnes Event (ID 1 als Beispiel)
+GET {{base_url}}/api/events/1/
+Accept: {{json}}
+
+
+### Quarries – Liste (nur wenn Endpoint existiert)
+GET {{base_url}}/api/quarries/
+Accept: {{json}}
+
+
+### Registrations – Liste (falls vorhanden)
+GET {{base_url}}/api/registrations/
+Accept: {{json}}
+
+
+### Registration – erfolgreich (Feldnamen/Choices müssen 1:1 zu deinem Serializer passen!)
+POST {{base_url}}/api/registrations/
+Content-Type: {{json}}
+
+{
+  "event": 1,
+  "first_name": "Alex",
+  "last_name": "Muster",
+  "email": "alex@example.com",
+  "status": "GOING"
+}
+
+### Registration – Duplikat (sollte 400 liefern, wenn UniqueConstraint z. B. auf (event, email) liegt)
+POST {{base_url}}/api/registrations/
+Content-Type: {{json}}
+
+{
+  "event": 1,
+  "first_name": "Alex",
+  "last_name": "Muster",
+  "email": "alex@example.com",
+  "status": "GOING"
+}
