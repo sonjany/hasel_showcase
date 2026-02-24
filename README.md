@@ -10,7 +10,7 @@ Haselrodeo – Rider - und Event Management System
 
 | Login | Waiver-Gate | Dashboard |
 | :---: | :---: | :---: |
-| ![Login](./frontend/screenshots/login_email.png) | ![Waiver](./frontend/screenshots/waiver.png) | ![Dashboard](./frontend/screenshots/homepage.png) |
+| ![Login](./frontend/screenshots/anmeldung_example.png) | ![Waiver](./frontend/screenshots/waiver.png) | ![Dashboard](./frontend/screenshots/homepage.png) |
 
 #Rechtliche Sicherheit (SHA-256)
 Jeder Waiver wird mit einem kryptografischen Hash gesichert.
