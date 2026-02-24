@@ -8,15 +8,14 @@ Haselrodeo – Rider - und Event Management System
 
 #Impressionen
 
-
 | Login | Waiver-Gate | Dashboard |
 | :---: | :---: | :---: |
-| ![Login](./screenshots/login_email.png) | ![Waiver](./screenshots/waiver.png) | ![Dashboard](./screenshots/homepage.png) |
+| ![Login](./frontend/screenshots/login_email.png) | ![Waiver](./frontend/screenshots/waiver.png) | ![Dashboard](./frontend/screenshots/homepage.png) |
 
 #Rechtliche Sicherheit (SHA-256)
-Jeder Waiver wird mit einem kryptografischen Hash gesichert, um die Integrität der digitalen Unterschrift zu gewährleisten.
+Jeder Waiver wird mit einem kryptografischen Hash gesichert.
 
-![Waiver PDF](./screenshots/waiver_pdf.png)
+![Waiver PDF](./frontend/screenshots/waiver_pdf.png)
 
 
 Die Fullstack-Anwendung wurde entwickelt, um die Registrierung von Fahrern, das Management von Events und den digitalen Haftungsverzicht (Waiver) zu automatisieren.
