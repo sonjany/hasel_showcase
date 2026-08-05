@@ -6,7 +6,7 @@ Haselrodeo – Rider - und Event Management System
 ![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
 
-#Impressionen
+# Impressionen
 
 | Login | Waiver-Gate | Dashboard |
 | :---: | :---: | :---: |
@@ -20,7 +20,7 @@ Jeder Waiver wird mit einem kryptografischen Hash gesichert.
 
 Die Fullstack-Anwendung wurde entwickelt, um die Registrierung von Fahrern, das Management von Events und den digitalen Haftungsverzicht (Waiver) zu automatisieren.
 
-#Features
+# Features
 
 •	Rider Access & Security: Ein geschützter Bereich für angemeldete Fahrer mit Login-Funktion.
 •	Digital Waiver Workflow: Automatischer Check beim Login, ob ein unterschriebener Haftungsverzicht vorliegt.
@@ -45,7 +45,7 @@ o	events: Zeitplanung und Event-Details.
 o	quarries: Location-Management.
 •	API: RESTful API-Endpunkte für nahtlose Frontend-Kommunikation.
 ________________________________________
-Showcase
+# Showcase
 
 1.	Login & Authentifizierung
 
@@ -57,7 +57,7 @@ Ein zentrales Sicherheitsfeature: Die App erkennt im Hintergrund, ob die Registr
 
 Das Herzstück der App: Ein intuitives Interface, das alle wichtigen Informationen (Events, Bilder, Orga-Chat) auf einen Blick liefert.
 ________________________________________
-#Installation & Setup
+# Installation & Setup
 
 Backend
 
@@ -72,7 +72,7 @@ Frontend
 2.	Abhängigkeiten installieren: npm install.
 3.	Entwicklungs-Server starten: npm run dev.
 ________________________________________
-#Roadmap
+# Roadmap
 
 •	[x] Grundlegende Django/React Architektur
 •	[x] Waiver-Check Logik und PDF-Anbindung
@@ -81,7 +81,7 @@ ________________________________________
 •	[ ] Bilder-Galerie für vergangene Events
 
 _______________________________________
-#Hinweis zum Showcase
+# Hinweis zum Showcase
 
 Dieses Repository dient als Code-Arbeitsprobe. 
 Sensible Daten wie Umgebungsvariablen (`.env`) und die Datenbank selbst (`db.sqlite3`) sind aus Sicherheitsgründen nicht enthalten. 
