@@ -38,6 +38,6 @@ class RegistrationSerializer(serializers.ModelSerializer):
             "first_name", "last_name", #"email",
             "role", "status",
             "organization", "comment",
-            "created_at", "updatet_at",
+            "created_at", "updated_at",
         ]
-        read_only_fields = ["id", "created_at", "updatet_at"]
+        read_only_fields = ["id", "created_at", "updated_at"]
