@@ -1,4 +1,4 @@
-Haselrodeo – Rider - und Event Management System
+Haselrodeo – Rider & Event-Management-System
 
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
 ![Django](https://img.shields.io/badge/django-%23092e20.svg?style=for-the-badge&logo=django&logoColor=white)
@@ -18,67 +18,80 @@ Jeder Waiver wird mit einem kryptografischen Hash gesichert.
 ![Waiver PDF](./frontend/screenshots/waiver_pdf.png)
 
 
-Die Fullstack-Anwendung wurde entwickelt, um die Registrierung von Fahrern, das Management von Events und den digitalen Haftungsverzicht (Waiver) zu automatisieren.
+Die Haselrodeo App ist eine Full-Stack-Webanwendung zur Organisation von Fahrerregistrierungen, Events und Steinbruch-Informationen für ein privates Enduro-/Offroad-Event.
+Dieses Repository ist eine reduzierte Showcase-Version des Haselrodeo-Projekts. Es zeigt den technischen Aufbau und zentrale Funktionen, ohne private Inhalte oder interne Projektdetails öffentlich zu machen.
 
 # Features
 
-•	Rider Access & Security: Ein geschützter Bereich für angemeldete Fahrer mit Login-Funktion.
-•	Digital Waiver Workflow: Automatischer Check beim Login, ob ein unterschriebener Haftungsverzicht vorliegt.
-•	Dynamic Dashboard: Nach erfolgreicher Prüfung erhält der User Zugriff auf sein Dashboard mit allen Event-Infos und Locations.
-•	Waiver Banner & PDF: Direktes Feedback auf der Startseite mit Link zum generierten PDF-Dokument.
-•	Event & Quarry Management: Strukturierte Verwaltung von Steinbrüchen und Renndaten im Backend.
+•	Rider Access Demo: Einstieg über eine Login-/Register-Seite als Showcase-Flow.
+•	Digital Waiver Workflow: Beispielhafter Ablauf zur Bestätigung eines Haftungsausschlusses vor dem Zugriff auf die App-Inhalte.
+•	Rider Dashboard: Startseite mit zentralem Einstieg zu Events, Steinbrüchen und weiteren Bereichen.
+•	Event & Quarry Management: Strukturierte Verwaltung von Events und Steinbruch-Informationen im Django-Backend.
+•  REST API: Bereitstellung der Daten über API-Endpunkte für die Kommunikation mit dem Frontend.
+
 ________________________________________
 # Technologie-Stack
 
 Frontend
 
-•	Framework: React (Vite) mit TypeScript.
-•	Styling: Tailwind CSS für ein modernes, responsives Mobile-First Design.
-•	Routing: React Router für die Trennung von Login, Waiver und App-Inhalten.
+•	React (Vite) mit TypeScript
+•	Tailwind CSS für ein responsives UI
+•	React Router für die Trennung von Login, Waiver und App-Inhalten
+•  API-Anbindung über HTTP-Requests
 
 Backend
 
-•	Framework: Django (Python) mit modularer App-Struktur.
+•	Django mit modularer App-Struktur
+•	Django REST Framework für API-Endpunkte
+•  SQLite für die lokale Entwicklung
+
 •	Apps:
-o	registrations: Verwaltung der Fahrer und Haftungsverzichte.
-o	events: Zeitplanung und Event-Details.
-o	quarries: Location-Management.
-•	API: RESTful API-Endpunkte für nahtlose Frontend-Kommunikation.
+   - `registrations`: egistrierung und Waiver-Struktur
+	- `events`: Eventdaten und Zeitplanung
+   - `quarries`: Steinbruch- und Location-Daten
 ________________________________________
 # Showcase
 
-1.	Login & Authentifizierung
+1. Login-/Register-Einstieg
+Der Einstiegspunkt der Anwendung ist ein einfacher Login-/Register-Flow. In der Showcase-Version dient dieser Bereich vor allem dazu, den späteren Nutzerfluss abzubilden.
 
-Der Einstiegspunkt für den Rider. Hier wird geprüft, ob die E-Mail im System hinterlegt ist.
-2. Der Waiver-Check
+2. Waiver-Flow
+Vor dem Zugriff auf die eigentlichen App-Inhalte wird ein beispielhafter Haftungsausschluss angezeigt. Die Nutzerin oder der Nutzer bestätigt diesen digital und gelangt anschließend zur Startseite.
 
-Ein zentrales Sicherheitsfeature: Die App erkennt im Hintergrund, ob die Registrierung bereits eine gültige Unterschrift hat. Falls nicht, wird der Zugriff blockiert, bis der Waiver unterschrieben wurde.
 3. Rider Dashboard
-
-Das Herzstück der App: Ein intuitives Interface, das alle wichtigen Informationen (Events, Bilder, Orga-Chat) auf einen Blick liefert.
+Die Startseite bietet einen Überblick und dient als zentraler Einstieg zu Events, Steinbrüchen und weiteren geplanten Funktionen.
 ________________________________________
 # Installation & Setup
 
+```bash
 Backend
 
-1.	Virtuelle Umgebung erstellen und aktivieren.
-2.	Anforderungen installieren: pip install -r requirements.txt.
-3.	Datenbank-Migrationen durchführen: python manage.py migrate.
-4.	Server starten: python manage.py runserver.
+cd backend
+python -m venv .venv
+.venv\Scripts\activate
+pip install -r requirements.txt
+python manage.py migrate
+python manage.py runserver
    
 Frontend
 
-1.	In den frontend-Ordner navigieren.
-2.	Abhängigkeiten installieren: npm install.
-3.	Entwicklungs-Server starten: npm run dev.
+cd frontend
+npm install
+npm run dev
+```
 ________________________________________
+
 # Roadmap
 
-•	[x] Grundlegende Django/React Architektur
-•	[x] Waiver-Check Logik und PDF-Anbindung
-•	[ ] Vollständiges Passwort-Hashing & JWT Auth
-•	[ ] Echtzeit-Chat für Rider-Orga
-•	[ ] Bilder-Galerie für vergangene Events
+- [x] Grundlegende Django/React-Architektur
+- [x] Event- und Steinbruch-Struktur
+- [x] API-Anbindung zwischen Backend und Frontend
+- [x] Showcase-Flow für Login, Waiver und Dashboard
+- [ ] Produktive Authentifizierung
+- [ ] Serverseitige Speicherung und Prüfung von Waiver-Akzeptanzen
+- [ ] PDF-Erzeugung für bestätigte Waiver
+- [ ] Echtzeit-Chat für Rider-Orga
+- [ ] Bildergalerie für vergangene Events
 
 _______________________________________
 # Hinweis zum Showcase
