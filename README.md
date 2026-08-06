@@ -31,14 +31,14 @@ Dieses Repository ist eine reduzierte Showcase-Version des Haselrodeo-Projekts. 
 ________________________________________
 # Technologie-Stack
 
-Frontend
+## Frontend
 
 •	React (Vite) mit TypeScript
 •	Tailwind CSS für ein responsives UI
 •	React Router für die Trennung von Login, Waiver und App-Inhalten
-•  API-Anbindung über HTTP-Requests
+•   API-Anbindung über HTTP-Requests
 
-Backend
+## Backend
 
 •	Django mit modularer App-Struktur
 •	Django REST Framework für API-Endpunkte
