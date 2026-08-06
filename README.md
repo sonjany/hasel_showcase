@@ -23,12 +23,11 @@ Dieses Repository ist eine reduzierte Showcase-Version des Haselrodeo-Projekts. 
 
 # Features
 
-•	Rider Access Demo: Einstieg über eine Login-/Register-Seite als Showcase-Flow.
-•	Digital Waiver Workflow: Beispielhafter Ablauf zur Bestätigung eines Haftungsausschlusses vor dem Zugriff auf die App-Inhalte.
-•	Rider Dashboard: Startseite mit zentralem Einstieg zu Events, Steinbrüchen und weiteren Bereichen.
-•	Event & Quarry Management: Strukturierte Verwaltung von Events und Steinbruch-Informationen im Django-Backend.
-•  REST API: Bereitstellung der Daten über API-Endpunkte für die Kommunikation mit dem Frontend.
-
+- **Rider Access Demo:** Einstieg über eine Login-/Register-Seite als Showcase-Flow.
+- **Digital Waiver Workflow:** Beispielhafter Ablauf zur Bestätigung eines Haftungsausschlusses vor dem Zugriff auf die App-Inhalte.
+- **Rider Dashboard:** Startseite mit zentralem Einstieg zu Events, Steinbrüchen und weiteren Bereichen.
+- **Event & Quarry Management:** Strukturierte Verwaltung von Events und Steinbruch-Informationen im Django-Backend.
+- **REST API:** Bereitstellung der Daten über API-Endpunkte für die Kommunikation mit dem React-Frontend.
 ________________________________________
 # Technologie-Stack
 
@@ -46,25 +45,25 @@ Backend
 •  SQLite für die lokale Entwicklung
 
 •	Apps:
-   - `registrations`: egistrierung und Waiver-Struktur
+    - `registrations`: egistrierung und Waiver-Struktur
 	- `events`: Eventdaten und Zeitplanung
-   - `quarries`: Steinbruch- und Location-Daten
+    - `quarries`: Steinbruch- und Location-Daten
 ________________________________________
 # Showcase
 
-1. Login-/Register-Einstieg
+## 1. Login-/Register-Einstieg
 Der Einstiegspunkt der Anwendung ist ein einfacher Login-/Register-Flow. In der Showcase-Version dient dieser Bereich vor allem dazu, den späteren Nutzerfluss abzubilden.
 
-2. Waiver-Flow
+## 2. Waiver-Flow
 Vor dem Zugriff auf die eigentlichen App-Inhalte wird ein beispielhafter Haftungsausschluss angezeigt. Die Nutzerin oder der Nutzer bestätigt diesen digital und gelangt anschließend zur Startseite.
 
-3. Rider Dashboard
+## 3. Rider Dashboard
 Die Startseite bietet einen Überblick und dient als zentraler Einstieg zu Events, Steinbrüchen und weiteren geplanten Funktionen.
 ________________________________________
 # Installation & Setup
 
 ```bash
-Backend
+## Backend
 
 cd backend
 python -m venv .venv
@@ -73,7 +72,7 @@ pip install -r requirements.txt
 python manage.py migrate
 python manage.py runserver
    
-Frontend
+## Frontend
 
 cd frontend
 npm install
