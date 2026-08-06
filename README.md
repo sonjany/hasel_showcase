@@ -33,21 +33,20 @@ ________________________________________
 
 ## Frontend
 
--	React (Vite) mit TypeScript
--	Tailwind CSS für ein responsives UI
--	React Router für die Trennung von Login, Waiver und App-Inhalten
--   API-Anbindung über HTTP-Requests
+- React mit Vite und TypeScript
+- Tailwind CSS für ein responsives UI
+- React Router zur Trennung von Login, Waiver und App-Inhalten
+- API-Anbindung über HTTP-Requests
 
 ## Backend
 
--	Django mit modularer App-Struktur
--	Django REST Framework für API-Endpunkte
--  SQLite für die lokale Entwicklung
-
-##	Apps:
-    - `registrations`: egistrierung und Waiver-Struktur
-	- `events`: Eventdaten und Zeitplanung
-    - `quarries`: Steinbruch- und Location-Daten
+- Django mit modularer App-Struktur
+- Django REST Framework für API-Endpunkte
+- SQLite für die lokale Entwicklung
+- Apps:
+  - `registrations`: Registrierung und Waiver-Struktur
+  - `events`: Eventdaten und Zeitplanung
+  - `quarries`: Steinbruch- und Location-Daten
 ________________________________________
 # Showcase
 
